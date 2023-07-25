@@ -1,0 +1,166 @@
+:root {
+    --gray-950: #121214;
+    --gray-900: #2F2F32;
+    --gray-800: #35353A;
+    --gray-700: #3F4046;
+    --gray-600: #4C4D55;
+    --gray-500: #61626B;
+    --gray-400: #7B7D86;
+    --gray-300: #a0a1a8;
+    --gray-200: #c5c6ca;
+    --gray-100: #e2e3e5;
+    --gray-50: #f6f6f7;
+
+    --violet-500: #8b5cf6;
+    --violet-400: #a78bfa;
+    --violet-300: #c4b5fd;
+}
+
+/* NAVIGATION BAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--gray-950);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: #101010;
+    border-bottom: 1px solid var(--gray-900);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--gray-100);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .2s;
+}
+
+.logo-img {
+    transition: all .2s;
+}
+
+.logo:hover {
+    transform: scaleX(110%) scaleY(110%);
+    color: var(--violet-500);
+}
+
+.logo:hover .logo-img {
+    fill: var(--violet-500);
+}
+
+.navbar-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 1.5rem;
+}
+
+.navbar-item {
+    text-decoration: none;
+    font-size: 1.05rem;
+    color: var(--gray-100);
+    transition: all .1s;
+}
+
+.navbar-item:hover {
+    color: var(--violet-500);
+    transform: scaleX(110%) scaleY(110%);
+}
+
+/* CALCULATOR */
+
+.section {
+    max-width: 866px;
+    margin: 2rem auto 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+}
+
+#display {
+    outline: none;
+    cursor: inherit;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4C4D55;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calc {
+    grid-column: span 3;
+    background-color: var(--violet-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: var(--gray-400);
+}
+
+.calc:hover {
+    background-color: var(--violet-400);
+}
+
+button:active {
+    background-color: var(--gray-600);
+}
